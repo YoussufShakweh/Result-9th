@@ -6,7 +6,7 @@ from selenium.common.exceptions import WebDriverException
 # Enter The Student Number
 std_num = input("Enter Your Number: ")
 
-url = "https://www.bakaloriasyria.com/2023/07/asasy-result.html?fbclid=IwAR0IC55pDJ78C_T7qkK20kgcwtE0kAphxdxMSqML9nlUaJTpfMYq6f_t2t4"
+url = "http://moed.gov.sy/9th/index.php"
 driver = webdriver.Edge()
 
 while True:
@@ -26,7 +26,7 @@ Select(driver.find_element(By.ID, "city")).select_by_value("7")
 driver.find_element(By.ID, "stdnum").send_keys(std_num)
 
 # Find Webelement "Submit" and Click It
-driver.find_element(By.LINK_TEXT, "ابدأ البحث").click()
+driver.find_element(By.ID, "submit").click()
 
 input("Press to close ...")
 
